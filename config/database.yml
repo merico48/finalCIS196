@@ -22,7 +22,6 @@ test:
 
 production:
   <<: *default
-  host: localhost
   adapter: postgresql
   database: db/production.postgresql
 
