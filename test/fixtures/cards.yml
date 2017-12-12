@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  cvv: MyString
+  expiration: MyString
+  user: one
+
+two:
+  number: MyString
+  cvv: MyString
+  expiration: MyString
+  user: two

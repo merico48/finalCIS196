@@ -1,0 +1,13 @@
+<h1>Sweatpants</h1>
+<p>this is where the items should be</p>
+
+
+    <% @items.each do |item| %>
+        <td><%= item.title %></td>
+        <td><%= item.price %></td>
+        <td><%= item.description %></td>
+        <%= link_to 'Buy' %>
+    <% end %>
+
+
+
