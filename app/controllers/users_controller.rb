@@ -21,6 +21,16 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def cart
+  end
+
+  def addcart
+    it = Item.find(params[:item_id])
+    current_user.items << it
+    redirect_to root_path
+  end
+
+  
   # POST /users
   # POST /users.json
   def create

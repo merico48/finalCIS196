@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :welcome
   resources :users
 
+  get '/cart', to: 'users#cart'
+  post '/cart/:item_id', to: 'users#addcart'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

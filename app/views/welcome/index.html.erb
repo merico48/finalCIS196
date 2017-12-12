@@ -2,12 +2,14 @@
 <p>this is where the items should be</p>
 
 
+<ol>
     <% @items.each do |item| %>
-        <td><%= item.title %></td>
+        
+        <li><td><%= item.title %></td></li>
         <td><%= item.price %></td>
         <td><%= item.description %></td>
-        <%= link_to 'Buy' %>
+        <%= link_to 'add to cart', "/cart/#{item.id}", method: :post  %>
     <% end %>
 
-
+</ol>
 

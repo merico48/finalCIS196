@@ -1,0 +1,15 @@
+<p> cart page </p>
+
+
+<ol>
+
+<% current_user.items.each do |item| %>
+        
+
+        <li><%= item.title %></li>
+        <%= item.description %>
+        <%= item.price %>
+        
+        <% end %>
+
+</ol>

@@ -1,7 +1,21 @@
 <nav class="nav-banner">
   <a class="nav-btn" href="/">Home</a>
-  <a class="nav-btn" href="/welcome/about">about</a>
-  <a class="nav-btn" href="/users">account</a>
-	<%= link_to "Sign up", '/users/new' %>
-	<%= link_to "Log in", '/login' %>
+  <a class="nav-btn" href="/welcome/about">About</a>
+  <a class="nav-btn" href="/users">Account</a>
+
+
+  <% if logged_in? %>
+  <%= link_to 'Cart', '/cart' %>
+  <%= link_to 'Log Out', '/logout', method: :delete %>
+
+  <% else %>
+
+  <a class="nav-btn" href="/login">Log In</a>
+  <a class="nav-btn" href="/users/new">Sign Up</a>
+
+
+<% end %>
+
+
+
 </nav>
