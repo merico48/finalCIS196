@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171212004736) do
+ActiveRecord::Schema.define(version: 20171212015341) do
 
   create_table "cards", force: :cascade do |t|
     t.string "number"
@@ -49,12 +49,12 @@ ActiveRecord::Schema.define(version: 20171212004736) do
 
   create_table "users", force: :cascade do |t|
     t.string "email"
-    t.string "password"
     t.integer "card_id"
     t.integer "order_id"
     t.integer "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_hash"
     t.index ["card_id"], name: "index_users_on_card_id"
     t.index ["item_id"], name: "index_users_on_item_id"
     t.index ["order_id"], name: "index_users_on_order_id"

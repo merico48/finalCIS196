@@ -6,8 +6,6 @@
   <thead>
     <tr>
       <th>Email</th>
-      <th>Password</th>
-      <th>Card</th>
       <th>Order</th>
       <th>Item</th>
       <th colspan="3"></th>
@@ -18,12 +16,10 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-        <td><%= user.password %></td>
 
 
 
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Edit cart', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
